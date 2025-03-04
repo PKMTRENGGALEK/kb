@@ -20,6 +20,7 @@ function loadPage(page, element) {
       content.innerHTML = "<h2>Halaman tidak ditemukan</h2>";
       content.style.opacity = 1;
       navbarTitle.textContent = "Dashboard";
+       window.location.reload(); // Refresh jika terjadi error
     });
 }
 
