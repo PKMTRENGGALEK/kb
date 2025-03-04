@@ -36,4 +36,46 @@ function toggleSidebar() {
     navbar.style.width = "100%";
   }
 }
-
+//data sasaran
+$(document).ready(function () {
+  fetch(
+    "https://script.google.com/macros/s/AKfycbxKCCTCcAHxKa1Yx0ft1ItDxh_SUYtSE1Wj-IZupbj7Q64-JtbXhOoqqOiPvtTX2std6Q/exec"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      let tableBody = "";
+      data.forEach((item, index) => {
+        tableBody += `<tr>
+                    <td>${index + 1}</td>
+                    <td contenteditable="true">${item.POSYANDU}</td>
+                    <td contenteditable="true" class="text-center">${
+                      item.JUMLAH_PENDUDUK
+                    }</td>
+                    <td contenteditable="true" class="text-center">${
+                      item.PUS
+                    }</td>
+                    <td contenteditable="true" class="text-center">${
+                      item.BULIN
+                    }</td>
+                    <td contenteditable="true" class="text-center">${
+                      item.PUS_GAKIN
+                    }</td>
+                    <td contenteditable="true" class="text-center">${
+                      item.PUS_4T
+                    }</td>
+                    <td contenteditable="true" class="text-center">${
+                      item.PUS_ALKI
+                    }</td>
+                    <td contenteditable="true" class="text-center">${
+                      item.TAHUN
+                    }</td>
+                    
+                </tr>`;
+      });
+      document.getElementById("table-body").innerHTML = tableBody;
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+      alert("Gagal mengambil data. Coba lagi nanti.");
+    });
+});
