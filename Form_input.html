@@ -1,0 +1,102 @@
+<div class="container mt-4">
+  <div class="card shadow p-4" style="max-width: 900px; margin: auto">
+    <h4 class="text-center">Peserta KB Aktif</h4>
+    <form>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="bulan" class="form-label">Bulan</label>
+            <select class="form-control" id="bulan" name="bulan">
+              <option value="Januari">Januari</option>
+              <option value="Februari">Februari</option>
+              <option value="Maret">Maret</option>
+              <option value="April">April</option>
+              <option value="Mei">Mei</option>
+              <option value="Juni">Juni</option>
+              <option value="Juli">Juli</option>
+              <option value="Agustus">Agustus</option>
+              <option value="September">September</option>
+              <option value="Oktober">Oktober</option>
+              <option value="November">November</option>
+              <option value="Desember">Desember</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="tahun" class="form-label">Tahun</label>
+            <input
+              type="number"
+              class="form-control"
+              id="tahun"
+              name="tahun"
+              min="2000"
+              max="2100"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="desa" class="form-label">Pilih Desa</label>
+            <select name="desa" id="desa" class="form-select">
+              <option value="">--Pilih data--</option>
+              <option value="Desa Karangsoko">Desa Karangsoko</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="iud" class="form-label">IUD</label>
+              <input type="number" class="form-control" id="iud" name="iud" />
+            </div>
+            <div class="mb-3">
+              <label for="mop" class="form-label">MOP</label>
+              <input type="number" class="form-control" id="mop" name="mop" />
+            </div>
+            <div class="mb-3">
+              <label for="mow" class="form-label">MOW</label>
+              <input type="number" class="form-control" id="mow" name="mow" />
+            </div>
+            <div class="mb-3">
+              <label for="implant" class="form-label">INPLANT</label>
+              <input
+                type="number"
+                class="form-control"
+                id="implant"
+                name="implant"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="suntik" class="form-label">SUNTIK</label>
+              <input
+                type="number"
+                class="form-control"
+                id="suntik"
+                name="suntik"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="pil" class="form-label">PIL</label>
+              <input type="number" class="form-control" id="pil" name="pil" />
+            </div>
+            <div class="mb-3">
+              <label for="kondom" class="form-label">KONDOM</label>
+              <input
+                type="number"
+                class="form-control"
+                id="kondom"
+                name="kondom"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
